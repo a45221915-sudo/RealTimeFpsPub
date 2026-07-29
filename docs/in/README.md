@@ -1,0 +1,175 @@
+[English](../../README.md) | [Español](../es/README.md)
+| [Português](../pt/README.md) | <u>[Bahasa Indonesia](README.md)</u>
+| [Русский](../ru/README.md) | [中文 (简体)](../zh-rCN/README.md) | [中文 (繁體)](../zh-rTW/README.md)
+| [日本語](../ja-rJP/README.md) | [Tiếng Việt](../vi/README.md)
+| [Türkçe](../tr/README.md)
+| [हिन्दी](../hi/README.md) | [বাংলা (ভারত)](../bn-rIN/README.md) | [ਪੰਜਾਬੀ (ਭਾਰਤ)](../pa-rIN/README.md) | [తెలుగు](../te-rIN/README.md) | [اردو (پاکستان)](../ur-rPK/README.md) | [العربية](../ar/README.md) | [ไทย](../th/README.md)
+
+----------------------
+
+### TL;DR
+
+* Jalankan `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
+* Jika menggunakan aplikasi terminal android dengan izin yang lebih tinggi,
+  jalankan `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA`
+
+----------------------
+
+Memberikan Izin menggunakan PC:
+----------------------
+
+<details>
+
+### 1. Aktifkan mode pengembang di pengaturan telepon
+
+<details>
+
+* Buka _Pengaturan_ > _Tentang ponsel_ > _Informasi perangkat lunak_ dan ketuk _Nomor versi_ secara
+  berurutan tujuh (7) kali untuk mengaktifkan opsi pengembang.
+
+  <img src="res/about_phone.jpg" width=320 height=640 alt="tentang telepon">
+
+</details>
+
+### 2. Aktifkan debugging USB
+
+<details>
+
+* Buka _Pengaturan_ > _Opsi developer_ (bisa _Pengaturan_ > _Sistem_ > _Opsi developer_ di
+  versi android yang lebih lama), gulir ke bawah dan temukan opsi _Process debug USB_.
+
+  <img src="res/usb_debugging.jpg" width=320 height=640 alt="usb_debugging">
+
+#### Catatan untuk beberapa perangkat seperti MIUI:
+
+* Aktifkan juga _Process debug USB untuk Pengaturan Keamanan_ jika ada di opsi Pengembang.
+
+* Aktifkan opsi _Nonaktifkan Pemantauan izin_ jika ada di Opsi pengembang. Diperlukan boot ulang.
+
+</details>
+
+### 3. Unduh ADB di komputer Anda
+
+<details>
+
+* Unduh ADB (platform-tools) ke komputer Anda:
+  untuk [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) |
+  untuk [Mac](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip) |
+  untuk [Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
+
+* Ekstrak file zip yang diunduh.
+
+</details>
+
+### 4. Navigasi ke dalam folder
+
+`platform-tools` yang Anda ekstrak di Windows Explorer atau Finder(macOS)
+
+### 5. Membuka antarmuka baris perintah
+
+  <details>
+
+#### Untuk Windows: Buka CMD
+
+* Ketik `cmd` di bilah alamat dan tekan enter. Ini akan membuka aplikasi Windows Command Prompt
+  .
+
+  ![opening_cmd](res/opening_cmd.png)
+
+#### Untuk MacOS:
+
+* Klik dua kali zip yang diunduh untuk membukanya, klik kanan folder `platform-tools` untuk membuka
+  menu konteks lalu klik _Layanan_ > _Terminal Baru di Folder_.
+
+</details>
+
+### 6. Menghubungkan ponsel Anda ke komputer Anda
+
+  <details>
+
+* Ponsel Anda akan meminta _Izinkan debugging USB_ jika ini pertama kalinya terhubung pada mode
+  debugging USB
+  . Ketuk _Izinkan_ atau _OK_.
+* Anda dapat mencentang _Selalu izinkan dari komputer ini_ (Silakan periksa catatan di akhir
+  tutorial ini tentang menjaga debugging USB tetap aktif).
+* <img src="res/usb_debugging_prompt.jpg" width=320 height=640 alt="usb_debugging_prompt">
+
+* Periksa koneksi dengan memasukkan perintah berikut diikuti dengan enter. Ini akan menampilkan
+  ID perangkat Anda jika berhasil terhubung.
+
+> ```adb devices```
+
+![6](res/adb_devices.png)
+
+* Jika perangkat Anda gagal terhubung ke komputer Anda, coba sambungkan ke port USB yang berbeda
+  dan/atau
+  menggunakan kabel data USB yang berbeda. Jika masih tidak terhubung, kemungkinan komputer Anda
+  kehilangan
+  driver USB untuk ponsel Anda.
+  Periksa [di sini untuk mengunduh driver USB OEM](https://developer.android.com/studio/run/oem-usb#Drivers).
+  Setelah terinstal, boot ulang PC Anda dan ulangi langkah no. 6.
+
+</details>
+
+### 7. Pemberian izin PROJECT_MEDIA yang sebenarnya
+
+  <details>
+
+* Ketika berhasil terhubung, masukkan perintah berikut dan tekan enter. Anda dapat menyalin perintah
+  di bawah ini. Jika perintah dijalankan dengan benar, itu akan kembali kosong.
+
+> ```adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow```
+
+* Jika muncul `adb.exe: more than one device/emulator...`, jalankan yang berikut ini sebagai
+  gantinya:
+
+>
+```adb -s [ID perangkat yang ditampilkan di langkah 6] shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow```
+
+![6](res/PROJECT_MEDIA.png)
+
+#### Catatan untuk MIUI, OnePlus dan beberapa perangkat lainnya
+
+Jika Anda mendapatkan Kesalahan `java.lang.SecurityException: grantRuntimePermission`, ikuti
+langkah-langkah berikut:
+
+1. Buka _Pengaturan_ > _Opsi pengembang_ (bisa _Pengaturan_ > _Sistem_ > _Opsi pengembang_
+2. Gulir ke bawah dan aktifkan **Debugging USB (Pengaturan Keamanan)**
+3. Jika ada _Dialog Peringatan_ yang muncul, ikuti langkah-langkahnya untuk melanjutkan.
+4. Boot ulang perangkat Anda dan coba lagi langkah-langkah Bagian 7.
+
+**Selesai!**
+</details>
+
+#### Anda sekarang dapat menonaktifkan pengaturan debugging USB
+
+* Buka _Pengaturan_ > _Opsi pengembang_, gulir ke bawah halaman dan **nonaktifkan** opsi _Debugging
+  USB_
+  .
+
+</details>
+
+----------------------
+
+Memberikan Izin tanpa menggunakan PC (menggunakan Shizuku):
+----------------------
+<details>
+
+### Opsi 1: Kamu dapat menginstal [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*
+
+dan mengaktifkannya dengan mengikuti panduan yang disediakan.  
+Setelah itu, kembali ke aplikasi _Real-time FPS Monitor_ untuk memberikan izin dengan menerapkan
+resolusi.
+
+*Jika versi Play Store tidak berfungsi di perangkat Anda, Anda dapat
+menggunakan [fork Shizuku ini](https://github.com/thedjchi/Shizuku/releases) sebagai gantinya.
+
+</details>
+
+
+
+----------------------
+
+### Anda tidak perlu mengulangi proses ini kecuali Anda menghapus instalan aplikasi sepenuhnya dan menginstalnya kembali.
+
+
