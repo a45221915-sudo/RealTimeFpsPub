@@ -11,7 +11,7 @@
 
 * `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` চালান
 * যদি উচ্চতর অনুমতি সহ অ্যান্ড্রয়েড টার্মিনাল অ্যাপ ব্যবহার করেন,
-  `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA` চালান
+  `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` চালান
 
 ----------------------
 
@@ -152,8 +152,8 @@
 
 ### বিকল্প ১: আপনি [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)* ইনস্টল করতে পারেন
 
-এবং নির্দেশাবলী অনুসরণ করে এটি সক্রিয় করতে পারেন।  
-এরপর, _Real-time FPS Monitor_ অ্যাপে ফিরে যান এবং রেজোলিউশন প্রয়োগ করে এটিকে অনুমতি দিন।
+এবং এটি প্রদত্ত নির্দেশিকা অনুসরণ করে সক্রিয় করতে পারেন। এরপর, Shizuku ব্যবহার করে অনুমতি প্রদান
+করতে _Real-time FPS_ অ্যাপে ফিরে যান।
 
 *যদি প্লে স্টোর সংস্করণটি আপনার ডিভাইসে কাজ না করে, তবে আপনি এর পরিবর্তে
 এই [Shizuku fork](https://github.com/thedjchi/Shizuku/releases) ব্যবহার করতে পারেন।

@@ -11,7 +11,7 @@
 
 * 執行 `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`。
 * 如果使用具有提升權限的 Android 終端應用程式，執行
-  `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA`。
+  `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`。
 
 ----------------------
 
@@ -142,7 +142,7 @@
 
 ### 選項 1：您可以安裝 [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*
 
-並按照其提供的指南激活它。然後返回「Real-time FPS Monitor」應用程式以通過應用解析度來授予其權限。
+並按照其提供的指南啟動它。然後返回 _Real-time FPS_ 應用程式以使用 Shizuku 授予權限。
 
 *如果 Play
 商店版本在您的設備上不起作用，您可以改用此 [Shizuku 分支](https://github.com/thedjchi/Shizuku/releases)。

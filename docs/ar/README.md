@@ -11,7 +11,7 @@
 
 * نفذ `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 * إذا كنت تستخدم تطبيق طرفية أندرويد بإذن مرتفع ،
-  نفذ `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA`
+  نفذ `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 
 ----------------------
 
@@ -154,11 +154,9 @@
 
 ## الخيارات المتاحة
 
-### 🟢 الخيار 1
+### الخيار 1: يمكنك تثبيت [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*
 
-يمكنك تثبيت [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*  
-وتفعيله باتباع دليل الإعداد الخاص به.  
-بعد ذلك، يمكنك العودة إلى تطبيق _Real-time FPS_ لمنحه الأذونات عن طريق تطبيق دقة الشاشة.
+وقم بتفعيله باتباع الدليل الذي وفره. ثم ارجع إلى تطبيق _Real-time FPS_ لمنح الإذن باستخدام Shizuku.
 
 *إذا كان إصدار متجر Play لا يعمل على جهازك، فيمكنك
 استخدام [نسخة Shizuku هذه](https://github.com/thedjchi/Shizuku/releases) بدلاً من ذلك.

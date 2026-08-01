@@ -11,7 +11,7 @@
 
 * `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` を実行します。
 * 昇格された権限を持つAndroidターミナルアプリを使用している場合は、
-  `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA` を実行します。
+  `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` を実行します。
 
 ----------------------
 
@@ -144,7 +144,10 @@ PCを使用せずに権限を付与する（Shizukuを使用）：
 ----------------------
 <details>
 
-### オプション1：[Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*をインストールし、提供されているガイドに従ってアクティブ化します。その後、_Real-time FPS Monitor_アプリに戻り、解像度を適用して権限を付与します。
+### オプション 1: [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)* をインストールできます
+
+提供されているガイドに従ってアクティブ化します。その後、_Real-time FPS_ アプリに戻り、Shizuku
+を使用して権限を付与します。
 
 *
 

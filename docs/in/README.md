@@ -11,7 +11,7 @@
 
 * Jalankan `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 * Jika menggunakan aplikasi terminal android dengan izin yang lebih tinggi,
-  jalankan `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA`
+  jalankan `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 
 ----------------------
 
@@ -155,11 +155,10 @@ Memberikan Izin tanpa menggunakan PC (menggunakan Shizuku):
 ----------------------
 <details>
 
-### Opsi 1: Kamu dapat menginstal [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*
+### Opsi 1: Anda dapat menginstal [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*
 
-dan mengaktifkannya dengan mengikuti panduan yang disediakan.  
-Setelah itu, kembali ke aplikasi _Real-time FPS Monitor_ untuk memberikan izin dengan menerapkan
-resolusi.
+dan mengaktifkannya mengikuti panduan yang disediakan. Kemudian kembali ke aplikasi _Real-time FPS_
+untuk memberikan izin menggunakan Shizuku.
 
 *Jika versi Play Store tidak berfungsi di perangkat Anda, Anda dapat
 menggunakan [fork Shizuku ini](https://github.com/thedjchi/Shizuku/releases) sebagai gantinya.

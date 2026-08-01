@@ -12,7 +12,7 @@
 * Ejecuta `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 
 * Si utilizas una aplicación de terminal en Android con permisos elevados,
-  ejecuta `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA`
+  ejecuta `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 
 ----------------------
 
@@ -160,10 +160,8 @@ Otorgar permiso sin usar una PC (usando Shizuku):
 
 ### Opción 1: Puedes instalar [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*
 
-y activarlo siguiendo la guía proporcionada. Luego, vuelve a la aplicación _Real-time FPS_ para
-otorgarle
-permisos
-aplicando una resolución.
+y activarlo siguiendo la guía que proporciona. Luego, regresa a la aplicación _Real-time FPS_ para
+otorgar el permiso usando Shizuku.
 
 *Si la versión de Play Store no funciona en tu dispositivo, puedes usar
 esta [bifurcación de Shizuku](https://github.com/thedjchi/Shizuku/releases) en su lugar.

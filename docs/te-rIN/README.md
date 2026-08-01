@@ -11,7 +11,7 @@
 
 * `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` అమలు చేయండి
 * ఎలివేటెడ్ అనుమతులు ఉన్న ఆండ్రాయిడ్ టెర్మినల్ యాప్‌ను ఉపయోగిస్తుంటే,  
-  `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA` అమలు చేయండి
+  `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` అమలు చేయండి
 
 ----------------------
 
@@ -162,10 +162,10 @@ adb -s [6వ దశలో చూపిన పరికరం ID] shell appops se
 
 <details>
 
-### ఆప్షన్ 1: Shizuku
+### ఆప్షన్ 1: మీరు [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)* ఇన్‌స్టాల్ చేయవచ్చు
 
-https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api*  
-ఇన్‌స్టాల్ చేసి గైడ్‌ను అనుసరించండి.
+మరియు అది అందించిన గైడ్‌ను అనుసరించి దానిని సక్రియం చేయండి. తర్వాత Shizuku ఉపయోగించి అనుమతి మంజూరు
+చేయడానికి _Real-time FPS_ యాప్‌కు తిరిగి వెళ్లండి.
 
 *ఒకవేళ ప్లే స్టోర్ వెర్షన్ మీ పరికరంలో పనిచేయకపోతే, మీరు దానికి బదులుగా
 ఈ [Shizuku fork](https://github.com/thedjchi/Shizuku/releases)ను ఉపయోగించవచ్చు.

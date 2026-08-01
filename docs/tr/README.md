@@ -12,7 +12,7 @@
 * `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` komutunu
   çalıştırın.
 * Yükseltilmiş izne sahip bir android terminal uygulaması kullanıyorsanız,
-  `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA` komutunu çalıştırın.
+  `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow` komutunu çalıştırın.
 
 ----------------------
 
@@ -150,10 +150,10 @@ Bilgisayar kullanmadan izin verme (Shizuku kullanarak):
 ----------------------
 <details>
 
-### Seçenek 1: [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*'yu yükleyebilir
+### Seçenek 1: [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*'yu yükleyebilirsiniz
 
-ve sağladığı kılavuzu izleyerek etkinleştirebilirsiniz. Ardından, bir çözünürlük uygulayarak izin
-vermek için _Real-time FPS Monitor_ uygulamasına geri dönün.
+ve sağladığı kılavuzu izleyerek etkinleştirebilirsiniz. Ardından, Shizuku kullanarak izin vermek
+için _Real-time FPS_ uygulamasına geri dönün.
 
 *Play Store sürümü cihazınızda çalışmazsa, bunun yerine
 bu [Shizuku çatalını](https://github.com/thedjchi/Shizuku/releases) kullanabilirsiniz.

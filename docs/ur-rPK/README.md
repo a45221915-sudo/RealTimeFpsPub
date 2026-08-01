@@ -13,7 +13,7 @@
   `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 * اگر آپ کسی اینڈرائیڈ ٹرمینل ایپ کو اضافی اجازت (Elevated Permission) کے ساتھ استعمال کر رہے ہیں
   تو:  
-  `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA`
+  `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`
 
 ----------------------
 
@@ -178,11 +178,10 @@ Windows Explorer یا Finder (macOS) میں اس `platform-tools` فولڈر ک�
 
 <details>
 
-### آپشن 1: Shizuku انسٹال کریں
+### آپشن 1: آپ [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)* انسٹال کر سکتے ہیں
 
-[Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)* انسٹال کریں  
-اور اس کی دی گئی ہدایات کے مطابق اسے فعال کریں۔  
-بعد میں Real-time FPS Monitor ایپ میں جا کر ریزولوشن لاگو کریں، اجازت خود بخود مل جائے گی۔
+اور اس کی فراہم کردہ گائیڈ پر عمل کرتے ہوئے اسے فعال کریں۔ پھر Shizuku کا استعمال کرتے ہوئے اجازت
+دینے کے لیے _Real-time FPS_ ایپ پر واپس جائیں۔
 
 *اگر Play Store ورژن آپ کے آلے پر کام نہیں کرتا ہے، تو آپ اس کے بجائے
 یہ [Shizuku fork](https://github.com/thedjchi/Shizuku/releases) استعمال کر سکتے ہیں۔

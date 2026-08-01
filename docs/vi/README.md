@@ -11,7 +11,7 @@
 
 * Thực thi `adb shell appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`.
 * Nếu sử dụng ứng dụng terminal android có quyền nâng cao, hãy thực thi
-  `pm grant com.tribalfs.realtimefps android.permission.PROJECT_MEDIA`.
+  `appops set com.tribalfs.realtimefps PROJECT_MEDIA allow`.
 
 ----------------------
 
@@ -150,9 +150,8 @@ Cấp quyền không cần máy tính (sử dụng Shizuku):
 
 ### Tùy chọn 1: Bạn có thể cài đặt [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api)*
 
-và kích hoạt nó theo hướng dẫn được cung cấp. Sau đó, quay lại ứng dụng _Real-time FPS Monitor_ để
-cấp quyền cho nó
-bằng cách áp dụng độ phân giải.
+và kích hoạt nó theo hướng dẫn được cung cấp. Sau đó, quay lại ứng dụng _Real-time FPS_ để cấp quyền
+bằng Shizuku.
 
 *Nếu phiên bản Play Store không hoạt động trên thiết bị của bạn, bạn có thể sử
 dụng [bản fork Shizuku này](https://github.com/thedjchi/Shizuku/releases) thay thế.
